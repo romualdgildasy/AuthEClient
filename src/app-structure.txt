@@ -1,0 +1,27 @@
+src/
+└── app/
+    ├── user/
+    │   ├── user/
+    │   │   ├── user.component.ts
+    │   │   ├── user.component.html
+    │   │   ├── user.component.css
+    │   │   └── user.component.spec.ts
+    │   │
+    │   ├── login/
+    │   │   ├── login.component.ts
+    │   │   ├── login.component.html
+    │   │   ├── login.component.css
+    │   │   └── login.component.spec.ts
+    │   │
+    │   └── registration/
+    │       ├── registration.component.ts
+    │       ├── registration.component.html
+    │       ├── registration.component.css
+    │       └── registration.component.spec.ts
+    │
+    ├── shared/
+    │   └── pipes/
+    │       └── first-key.pipe.ts
+    │
+    └── services/
+        └── auth.service.ts
