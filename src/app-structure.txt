@@ -13,7 +13,7 @@ src/
     │   │   ├── login.component.css
     │   │   └── login.component.spec.ts
     │   │
-    │   └── registration/
+    │   └── registration/ **
     │       ├── registration.component.ts
     │       ├── registration.component.html
     │       ├── registration.component.css
