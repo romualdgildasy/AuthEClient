@@ -1,12 +1,25 @@
 import { Component } from '@angular/core';
+import { Form, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
   standalone: true,
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './registration.component.html',
   styles: ``
 })
 export class RegistrationComponent {
 
+  form: any;
+
+  constructor(public formBuilder: FormBuilder) {
+    this.form = this.formBuilder.group({
+      fullName: [''],
+      email: [''],
+      password: [''],
+      confirmPassword: ['']
+    });
+  }
+
 }
+
