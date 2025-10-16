@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Form, ReactiveFormsModule, FormBuilder } from '@angular/forms';
+import { ReactiveFormsModule, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
@@ -9,17 +9,14 @@ import { Form, ReactiveFormsModule, FormBuilder } from '@angular/forms';
   styles: ``
 })
 export class RegistrationComponent {
+  constructor(public formBuilder:FormBuilder) {}
 
-  form: any;
-
-  constructor(public formBuilder: FormBuilder) {
-    this.form = this.formBuilder.group({
-      fullName: [''],
-      email: [''],
-      password: [''],
-      confirmPassword: ['']
-    });
-  }
+  form = this.formBuilder.group({
+    fullName: [''],
+    email: [''],
+    password: [''],
+    confirmPassword: [''],
+  }); 
 
 }
 
