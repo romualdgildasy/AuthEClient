@@ -5,7 +5,7 @@ import { UserComponent } from "./user/user.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserComponent],
+  imports: [UserComponent],
   templateUrl: './app.component.html',
   styles: [],
 })

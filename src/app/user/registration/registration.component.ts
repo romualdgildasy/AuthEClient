@@ -19,5 +19,9 @@ export class RegistrationComponent {
             confirmPassword: ['']
         });
     }
+
+    onSubmit() {
+      console.log(this.form.value);
+    }
 }
 
