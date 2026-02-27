@@ -1,18 +1,26 @@
+<div class="mb-4 h2 text-success">
+       Sign Up
+</div>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <!-- champ de saisie -->
-    <div class="mb-4 h2 text-success">
-       Sign Up
-    </div>
-    <!-- ajouter des champs -->
     <div class="mb-3">
         <input class="form-control bg-body-secondary" placeholder="Full Name" formControlName="fullName"/>
+        <!--afficher le message d'erreur -->
+        <div class="error-feedback" *ngIf="
+        hasDisplayableError('fullName') &&
+        form.controls.fullName.hasError('required')">
+        Please enter your full name.
+        </div>
     </div>
+
     <div class="mb-3">
         <input class="form-control bg-body-secondary" placeholder="Email" formControlName="email"/>
     </div>
+
     <div class="mb-3">
         <input type="password" class="form-control bg-body-secondary" placeholder="Password" formControlName="password"/>
     </div>
+    
     <div class="mb-3">
         <input type="password" class="form-control bg-body-secondary" placeholder="Confirm Password" formControlName="confirmPassword"/>    
     </div>
@@ -22,4 +30,6 @@
             Register
         </button>
     </div>
+    
 </form>
+ 
