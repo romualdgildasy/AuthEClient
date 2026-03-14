@@ -15,12 +15,32 @@
 
     <div class="mb-3">
         <input class="form-control bg-body-secondary" placeholder="Email" formControlName="email"/>
+        <div class="error-feedback" *ngIf="hasDisplayableError('email') ">
+            <div *ngIf="form.controls.email.hasError('required')">
+                Please enter your email address.
+            </div>
+            <div *ngIf="form.controls.email.hasError('email')">
+                Please enter a valid email address.
+            </div>
+        </div>
+        
     </div>
 
     <div class="mb-3">
         <input type="password" class="form-control bg-body-secondary" placeholder="Password" formControlName="password"/>
+         <div class="error-feedback" *ngIf="hasDisplayableError('email') ">
+            <div *ngIf="form.controls.password.hasError('required')">
+                Please enter your password.
+            </div>
+            <div *ngIf="form.controls.password.hasError('minlength')">
+                Altest  06 characters are required.
+            </div>
+            <div *ngIf="form.controls.password.hasError('pattern')">
+                one or more special characters, 
+            </div>
+        </div>
     </div>
-    
+
     <div class="mb-3">
         <input type="password" class="form-control bg-body-secondary" placeholder="Confirm Password" formControlName="confirmPassword"/>    
     </div>
